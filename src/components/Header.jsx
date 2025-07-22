@@ -64,9 +64,8 @@ const Header = () => {
             </div>
             <div
   className={clsx(
-    'min-lg:hidden w-[30px] h-[20px] cursor-pointer max-lg:absolute top-10 right-4 z-50 flex items-center justify-center',
-    i18n.language === 'en' ? 'right-4' : 'left-4'
-  )}
+    'min-lg:hidden w-[30px] h-[20px] cursor-pointer max-lg:absolute top-10 z-50 flex items-center justify-center',
+    i18n.language === 'en' ? 'right-4' : 'left-4')}
   onClick={() => {
     setActiveMenu(!activeMenu);
   }}
