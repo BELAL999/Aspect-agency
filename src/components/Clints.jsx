@@ -4,7 +4,7 @@ import {useRef,useState} from "react"
 const Clints = () => {
     const lightSvg = useRef(null);
     const [clients,setClients] = useState(Array.from({ length: 18 }, (_, i) => ({
-        src: `src/assets/clients/${i + 1}.png`
+        src: `/clients/${i + 1}.png`
     })))
     useGSAP(()=>{
         gsap.set(".light-bg",{
