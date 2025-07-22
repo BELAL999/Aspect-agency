@@ -12,5 +12,8 @@
     },
     "hero" : {
         "header" : "Creative digital solutions for ambitious brands"
+    },
+    "about" : {
+        "Get Start" : "Get Start"
     } 
 }

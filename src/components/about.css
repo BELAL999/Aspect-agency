@@ -1,0 +1,14 @@
+.outer:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 62%;
+    background-color: #0f0f0f;
+    z-index: 0;
+}
+/* .outer svg{
+    filter: drop-shadow(0 0 6px #f97316) 
+          drop-shadow(0 0 12px #f97316) 
+          drop-shadow(0 0 18px #ef4444);
+} */

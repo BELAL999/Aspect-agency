@@ -3,7 +3,7 @@ import { useTheme } from '../contexts/context';
 import GlowingArcs from './Arc';
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import heroArc from "../assets/images/arc.svg"
+
 
 
 import './heroSection.css'

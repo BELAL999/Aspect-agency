@@ -51,9 +51,7 @@ body{
 }
 
 
-p{
-    color: var(--color-p1);
-}
+
 li{
     color :var(--color-p1)
 }
@@ -110,4 +108,68 @@ button{
 
 @utility paddings {
     padding-inline-end: 40px;
+}
+
+@utility absoulte-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+}
+
+@utility bg-over{
+opacity: 0.8;
+background: linear-gradient(90deg, #FF2E12 -8.49%, #FD8848 40.49%, #FFB186 104.72%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-size: 26px;
+font-style: normal;
+font-weight: 400;
+line-height: 69.6px
+}
+@utility about-p{
+    color: rgb(255, 255, 255);
+    opacity: 0.3;
+    text-align: center;
+    font-family: "Rethink Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27px; /* 168.75% */
+}
+.about-button{
+    position: relative;
+    padding: 11.034px 40px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 12px;
+    transition : 1s;
+    background-color: #0f0f0f;
+    border : none;
+    outline : none
+}
+
+.about-button::after , .about-button::before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: conic-gradient(transparent 70%, #F0360F); 
+    transition: 1s;
+    border-radius: 13px;
+    z-index: -1;
+}
+
+.about-button:hover {
+  &::after , &::before  {
+     background-image: linear-gradient(90deg, #FF2E12 -8.49%, #FD8848 40.49%, #FFB186 104.72%);
+  }
+  &::before{
+  filter : blur(5px)
+}
 }
