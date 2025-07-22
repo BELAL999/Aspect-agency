@@ -34,7 +34,9 @@ useGSAP(() => {
     yPercent: -100,
     ease: "power4.out"
   }).to(".about-p",{
-    opacity : 1
+    opacity : 1,
+    stagger : 0.1,
+    ease : "power4.out"
   })
 });
   const {t} = useTheme();
