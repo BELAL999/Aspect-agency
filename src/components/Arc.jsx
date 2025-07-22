@@ -31,7 +31,7 @@ export default function GlowingArcs({ ref = null, pahtData }) {
                     stroke="url(#arcGradient)"
                     strokeWidth="4"
                     filter="url(#glow)"
-                    className="animate-pulse"
+                    // className="animate-pulse"
                     style={{
                         filter: 'drop-shadow(0 0 6px #f97316) drop-shadow(0 0 12px #f97316) drop-shadow(0 0 18px #ef4444)',
                         animationDuration: '2.5s',
