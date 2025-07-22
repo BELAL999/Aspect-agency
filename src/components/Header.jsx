@@ -28,7 +28,12 @@ const Header = () => {
                 {activeMenu && <li>
 
                 <div className='flex gap-[20px] flex-col justify-between'>
-                    <button onClick={() => changeLanguage(i18n.language === 'en' ? "ar" : "en")} className='cursor-pointer text-xl'>
+                    <button onClick={() => {
+                        changeLanguage(i18n.language === 'en' ? "ar" : "en")
+                        setActiveMenu(false)
+
+                    }
+                        } className='cursor-pointer text-xl'>
                         {i18n.language === 'en' ? 'العربية' : 'English'}
                     </button>
                     {/* 1px solid rgba(253, 136, 72, 0.80); */}
