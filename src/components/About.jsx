@@ -58,15 +58,15 @@ useGSAP(() => {
         fill="transparent" />
 </svg>
       <p className='absoulte-center bg-over'>
-        Overview
+        {t("about.overview")}
       </p>
       </div>
       <div className='text-center max-w-[651px] pt-2 z-10 parag'>
               <p className='pb-[10px] about-p'>
-        At ASPECT, we build bold brands, smart websites, and powerful digital experiences — all tailored to help you grow and stand out.
+        {t("about.slogan")}
       </p>
       <p className='pb-[48px] about-p'>
-        Build a brand that turns heads — it starts here.
+        {t("about.slogan-rest")}
       </p>
         <button className='about-button'>
           {t("about.Get Start")}

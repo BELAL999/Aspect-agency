@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'Bukra'; /* You choose this name */
-    src: url("src/assets/fonts/29LT Bukra Regular.woff2") format('woff2');
+    src: url('/fonts/Bukra-Regular.woff2') format('woff2');
     font-weight: normal; /* or 400 */
     font-style: normal;
 }
@@ -170,7 +170,7 @@ line-height: 69.6px
   transition: 1s;
   border-radius: 13px;
   z-index: -1;
-  animation: borderMove 2s infinite;
+  animation: borderMove 3s infinite;
 }
 .about-button:hover {
   &::after , &::before  {

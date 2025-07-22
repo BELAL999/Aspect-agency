@@ -14,6 +14,10 @@
         "header" : "Creative digital solutions for ambitious brands"
     },
     "about" : {
+        "slogan" : "At ASPECT, we build bold brands, smart websites, and powerful digital experiences — all tailored to help you grow and stand out.",
+                         "slogan-rest" : "Build a brand that turns heads — it starts here.",
+                         "overview" : "Overview",
+
         "Get Start" : "Get Start"
     } 
 }
