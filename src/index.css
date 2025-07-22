@@ -4,6 +4,14 @@
 @import "tailwindcss";
 
 
+@font-face {
+    font-family: 'Bukra'; /* You choose this name */
+    src: url("src/assets/fonts/29LT Bukra Regular.woff2") format('woff2');
+    font-weight: normal; /* or 400 */
+    font-style: normal;
+}
+
+
 @theme{
     --color-black-bg: #0f0f0f;
     --color-p1 : #FFFFFF ;
@@ -13,6 +21,10 @@ body{
     font-family: "Rethink Sans", sans-serif;
     position: relative;
     overflow-x: hidden;
+}
+
+:lang(ar) {
+    font-family: 'Bukra', sans-serif;
 }
 
 .container {

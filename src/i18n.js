@@ -19,5 +19,8 @@ i18n
         caches: ['localStorage']
         }
 });
-
+// i18n.on('languageChanged', (lng) => {
+//     document.documentElement.setAttribute('lang', lng);
+//     document.documentElement.setAttribute('dir', i18n.dir(lng));
+// });
 export default i18n;

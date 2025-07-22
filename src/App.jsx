@@ -9,6 +9,7 @@ const App = () => {
   const {i18n } = useTranslation();
   useEffect(() => {
     document.body.dir = i18n.dir();
+    document.body.setAttribute('lang', i18n.language);
   }, [i18n.language]);
 
   return (
