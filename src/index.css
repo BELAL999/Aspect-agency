@@ -95,3 +95,7 @@ button{
     }
 
 }
+
+@utility paddings {
+    padding-inline-end: 40px;
+}

@@ -25,8 +25,28 @@ const Header = () => {
                         </NavLink>
                     </li>
                 ))}
+                {activeMenu && <li>
+
+                <div className='flex gap-[20px] flex-col justify-between'>
+                    <button onClick={() => changeLanguage(i18n.language === 'en' ? "ar" : "en")} className='cursor-pointer text-xl'>
+                        {i18n.language === 'en' ? 'العربية' : 'English'}
+                    </button>
+                    {/* 1px solid rgba(253, 136, 72, 0.80); */}
+                    <button className='text-xl relative  flex justify-center items-center gap-[8px] border border-[#fd8848cc] rounded-3xl px-[14px] py-[10px] cursor-pointer'>
+                        <div className='flex justify-center items-center'>
+                            <div className='relative flex items-center justify-center min-w-[28px] min-h-[28px]'>
+                                <span className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#a20c0233] w-[18px] h-[18px] rounded-full dot-pulse'></span>
+                                <span className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[13px] h-[13px] rounded-full bg-[#a20c0280] dot-pulse-2'></span>
+                                <span className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[6px] h-[6px] rounded-full bg-[#A20C02] dot-pulse-3'></span>
+                            </div>
+                        </div>
+                        <p>{t('navigation.contact')}</p>
+                    </button>
+            </div>
+                </li>}
+
             </ul>
-            <div className='flex gap-[20px] max-lg:px-[40px]'>
+            <div className='flex gap-[20px]  max-lg:hidden'>
                 <button onClick={() => changeLanguage(i18n.language === 'en' ? "ar" : "en")} className='cursor-pointer text-xl'>
                     {i18n.language === 'en' ? 'العربية' : 'English'}
                 </button>
@@ -44,7 +64,7 @@ const Header = () => {
             </div>
             <div
   className={clsx(
-    'min-lg:hidden w-[30px] h-[20px] cursor-pointer max-lg:absolute top-13 right-4 z-50 flex items-center justify-center',
+    'min-lg:hidden w-[30px] h-[20px] cursor-pointer max-lg:absolute top-10 right-4 z-50 flex items-center justify-center',
     activeMenu ? '' : ''
   )}
   onClick={() => {
