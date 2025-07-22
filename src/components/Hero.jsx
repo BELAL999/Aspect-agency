@@ -3,6 +3,7 @@ import { useTheme } from '../contexts/context';
 import GlowingArcs from './Arc';
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
+import heroArc from "../assets/images/arc.svg"
 
 
 import './heroSection.css'
@@ -103,7 +104,8 @@ const HeroSection = () => {
                         </svg>
                     </div>
                 </div>
-                <GlowingArcs ref={arc} pahtData = "M 100 150 Q 400 50 700 150"  />
+                {/* <GlowingArcs ref={arc} pahtData = "M 100 150 Q 400 50 700 150"  /> */}
+                <img src={heroArc} alt={heroArc} />
             </section>
 
     );
