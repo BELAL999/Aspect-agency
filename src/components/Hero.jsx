@@ -103,7 +103,7 @@ const HeroSection = () => {
                         </svg>
                     </div>
                 </div>
-                <GlowingArcs ref={arc} pahtData = "M 0 150 Q 400 30 800 150"  />
+                <GlowingArcs ref={arc} pahtData = "M 100 150 Q 400 50 700 150"  />
             </section>
 
     );

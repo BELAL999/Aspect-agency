@@ -1,7 +1,7 @@
 export default function GlowingArcs({ ref = null, pahtData }) {
     console.log(pahtData)
     return (
-        <div className="absolute top-[60%] w-full h-40 lg:h-48 overflow-hidden">
+        <div className="absolute top-[60%] w-full h-24 md:h-40 lg:h-48 overflow-hidden">
             <svg 
                 viewBox="0 0 800 200" 
                 className="w-full h-full"
@@ -10,7 +10,7 @@ export default function GlowingArcs({ ref = null, pahtData }) {
                 preserveAspectRatio="xMidYMid slice"
             >
                 <defs>
-                   <linearGradient id="arcGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <linearGradient id="arcGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" stopColor="#ef4444" stopOpacity="0" />
                         <stop offset="35%" stopColor="#f97316" stopOpacity="0.3" />
                         <stop offset="50%" stopColor="#f59e0b" stopOpacity="0.8" />
