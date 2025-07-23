@@ -26,7 +26,6 @@ useGSAP(() => {
         ease: "none",
         scrollTrigger: {
             trigger: ".service-section",
-            markers: true,
             pin: true,
             start: "top top",
             end: () => `+=${cards.length * 400}px`,

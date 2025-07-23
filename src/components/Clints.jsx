@@ -21,13 +21,12 @@ useGSAP(() => {
             start: "top center",
             end: "+=400", // Increased for smoother animation
             scrub: 1, // Adding ease to scrub
-            pin: true,
         }
     });
 
     // Set initial positions
     gsap.set(lightBg.current, { yPercent: -100 });
-    gsap.set(stats.current, { y: 300 });
+    gsap.set(stats.current, { yPercent: 100 });
 
     // Animate lightBg from start
     tl.to(lightBg.current, {
@@ -37,7 +36,7 @@ useGSAP(() => {
     })
     // Animate stats with slight delay and stagger
     .to(stats.current, {
-        y: 0,
+        yPercent: 0,
         duration: 0.3,
         stagger: 0.1,
         ease: "back.out(1.7)"
