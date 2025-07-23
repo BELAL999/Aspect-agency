@@ -1,6 +1,5 @@
 
 import { plans } from "../constatns/data" 
-import noice from "../assets/images/planNoise.png"
 
 const Plans = () => {
 
@@ -15,7 +14,7 @@ const Plans = () => {
             </div>
             <div className="mt-16 w-full flex flex-wrap justify-center gap-8 items-center">
                 {plans.map((plan) => (
-                    <div key={plan.id} className={`p-8 rounded-2xl border relative overflow-hidden lg:w-[calc(33%-40px)]  max-w-[500px] ${plan.featured ? ' scale-105 featured-plan' : 'bg-stone-900/20 border-stone-200/10'} flex flex-col`}>
+                    <div key={plan.id} className={`p-8 rounded-2xl border relative overflow-hidden w-full lg:w-[calc(33%-40px)]  max-w-[500px] ${plan.featured ? ' scale-105 featured-plan' : 'bg-stone-900/20 border-stone-200/10'} flex flex-col`}>
                         {plan.featured && (
                             <div className="absolute top-0 left-0 w-full h-[178px] z-[-1] rounded-2xl bg-[#BF4A25] blur-[75px]">
                             </div>
