@@ -57,7 +57,6 @@ useGSAP(() => {
                 scrollTrigger: {
                     trigger: stats.current,
                     start: "top-=100 80%",
-                    markers : true,
                 }
             });
         }
