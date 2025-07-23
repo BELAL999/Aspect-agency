@@ -15,7 +15,6 @@ useGSAP(() => {
       end: "+=500",
       scrub : true,
       toggleActions: "play pause resume reset",
-      markers: true
     }
   });
 

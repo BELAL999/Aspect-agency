@@ -214,3 +214,9 @@ line-height: 69.6px
     border: #C9C9C978  1px solid;
     background-image: linear-gradient(129deg, rgba(0, 0, 0, 0.20) 32.34%, rgba(59, 52, 52, 0.13) 84.7%, rgba(255, 255, 255, 0.06) 137.06%);
 }
+
+
+@utility bg-card{
+    background: linear-gradient(335deg, #000 47.23%, #FD8848 178.94%);
+
+}

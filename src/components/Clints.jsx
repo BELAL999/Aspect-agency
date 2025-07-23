@@ -63,7 +63,7 @@ useGSAP(() => {
     });
 }, []);   
 return(
-        <section className='text-p1 w-screen container mb-[1000px] outerFrame '>
+        <section className='text-p1 w-screen container outerFrame '>
             <h3 className="py-8 mx-auto font-semibold text-2xl w-fit">Trusted by</h3>
             <div className="relative clients-frame overflow-hidden justify-center items-center">
                 <div className='light-bg' ref={lightBg}></div>
