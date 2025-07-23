@@ -26,12 +26,12 @@ useGSAP(() => {
     });
 
     // Set initial positions
-    gsap.set(lightBg.current, { y: -300 });
+    gsap.set(lightBg.current, { yPercent: -100 });
     gsap.set(stats.current, { y: 300 });
 
     // Animate lightBg from start
     tl.to(lightBg.current, {
-        y: 0,
+        yPercent: -50,
         duration: 0.4, // Relative duration within timeline
         ease: "power2.out"
     })
@@ -84,7 +84,7 @@ return(
                         </radialGradient>
                     </defs>
                 </svg>
-                <div className="flex flex-wrap gap-x-8 gap-y-4 pt-8">
+                <div className="flex flex-wrap gap-x-8 gap-y-4 pt-8 justify-center">
                     {clients.map((client,index) => (
                         <div key= {index} className="clinet-bg">
                             <img src={client.src} alt={`Client ${index + 1}`} />
@@ -97,9 +97,9 @@ return(
                 <h3 className="pt-8 mx-auto font-semibold text-2xl w-fit">
                     {t("Results & Analytics")}
                 </h3>
-                <div className="mt-12 flex justify-between  clients-frame h-fit flex-wrap shadow-2xl">
+                <div className="mt-12 flex max-sm:jutify-center items-center justify-between clients-frame h-fit flex-wrap shadow-2xl">
                     {statsData.map((item,index) => (
-                        <div key={index} className="flex flex-col justify-center items-center px-[32px] py-[22px] relative " style={{
+                        <div key={index} className="flex flex-col justify-center items-center px-[12px] py-[22px] relative w-[174px] " style={{
                             borderRadius: "5.41px",
                             background: "linearGradient(180deg, rgba(102, 102, 102, 0.09) 0%, rgba(0, 0, 0, 0.00) 100%)",
                         }}>
