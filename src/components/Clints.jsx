@@ -21,12 +21,13 @@ useGSAP(() => {
             start: "top center",
             end: "+=400", // Increased for smoother animation
             scrub: 1, // Adding ease to scrub
+            toggleActions :"play pause resume reset"
         }
     });
 
     // Set initial positions
     gsap.set(lightBg.current, { yPercent: -100 });
-    gsap.set(stats.current, { yPercent: 100 });
+    gsap.set(stats.current, { yPercent: 0 });
 
     // Animate lightBg from start
     tl.to(lightBg.current, {
@@ -35,8 +36,8 @@ useGSAP(() => {
         ease: "power2.out"
     })
     // Animate stats with slight delay and stagger
-    .to(stats.current, {
-        yPercent: 0,
+    .from(stats.current, {
+        yPercent: 100,
         duration: 0.3,
         stagger: 0.1,
         ease: "back.out(1.7)"
