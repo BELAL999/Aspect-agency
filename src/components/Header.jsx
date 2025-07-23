@@ -5,14 +5,31 @@ import logo from '../assets/images/logo.png'
 import clsx from "clsx"
 import './headerDropdown.css'
 import { GoX } from "react-icons/go";
+import { useEffect,useState } from 'react';
 
 const Header = () => {
     const {t,i18n , setActiveMenu , activeMenu} = useTheme();
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
     };
+    const [hasScroll ,setHasScroll] = useState(false)
+
+    useEffect(()=>{
+        const handleScroll = () => {
+            if(window.scrollY > 32 ){
+                setHasScroll(true)
+            } else {
+                setHasScroll(false)
+            }
+        }
+        window.addEventListener("scroll",handleScroll)
+        return () => (
+            window.removeEventListener("scroll",handleScroll)
+        )
+    },[])
+
     return (
-        <nav className='flex container w-full pt-[36px] items-center justify-between fixed z-20 left-[50%] translate-x-[-50%]'>
+        <nav className={clsx('flex container w-full mt-[36px] items-center justify-between fixed z-20 left-[50%] translate-x-[-50%] transition-all duration-500',hasScroll ? "clients-frame" : "")}>
             <NavLink to="/" onClick={() => setActiveMenu(false)}>
                 <img src={logo} alt="our logo" width={150}  className={clsx(activeMenu ? "hidden" : "")}/>
             </NavLink>
