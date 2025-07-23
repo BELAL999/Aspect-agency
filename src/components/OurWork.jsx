@@ -8,15 +8,31 @@ import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 
 const OurWork = () => {
 
+    const container = useRef();
     const {i18n} = useTheme();
 
+    useGSAP(() => {
+        gsap.from(".work-card", {
+            scrollTrigger: {
+                trigger: ".work-cards-container",
+                start: "top 80%",
+                toggleActions: "play none none none",
+            },
+            opacity: 0,
+            y: 50,
+            duration: 0.8,
+            ease: "power3.out",
+            stagger: 0.2,
+        });
+    }, { scope: container });
+
     return (
-        <section className='min-h-screen border mt-32 flex flex-col items-center container service-section overflow-hidden pt-12'>
+        <section ref={container} className='min-h-screen border mt-32 flex flex-col items-center container service-section overflow-hidden pt-12'>
             <div className="h-12 px-3.5 bg-stone-900/10 rounded-[124.42px] outline-[1.24px] outline-offset-[-1.24px] outline-stone-200/10 backdrop-blur-[6.22px] inline-flex justify-center items-center gap-3">
                 <div className="text-center justify-start text-white text-xl font-medium leading-loose">Our Works</div>
             </div>
             <div className="mt-16 w-full p-4">
-                <div className="flex justify-center items-center flex-wrap gap-10 relative">
+                <div className="flex justify-center items-center flex-wrap gap-10 relative work-cards-container">
                     {Work.map((item) => (
                         <div key={item.id} className="w-full lg:w-[calc(50%-40px)] max-w-[520px] work-card">
                             <img src={item.imageUrl} alt={item.imageUrl} className="w-full object-cover rounded-md mb-10" />

@@ -117,3 +117,72 @@ export const Work = [
     "imageUrl": img4
   }
 ]
+export const plans = [
+  {
+    "planName": "Starter Plan",
+    "description": "is simply dummy text of the printing and typesetting industry.",
+    "price": "FREE",
+    "features": [
+      "Basic Analytics Dashboard",
+      "Task & Project Management",
+      "Cloud Storage ( Up to 5GB )",
+      "Email & Chat Support",
+      "Team Collaboration"
+    ],
+    "featured": false
+  },
+  {
+    "planName": "Gold Plan",
+    "description": "is simply dummy text of the printing and typesetting industry.",
+    "price": "FREE",
+    "features": [
+      "Basic Analytics Dashboard",
+      "Task & Project Management",
+      "Cloud Storage ( Up to 5GB )",
+      "Email & Chat Support",
+      "Team Collaboration"
+    ],
+    "featured": true
+  },
+  {
+    "planName": "Premium Plan",
+    "description": "is simply dummy text of the printing and typesetting industry.",
+    "price": "FREE",
+    "features": [
+      "Basic Analytics Dashboard",
+      "Task & Project Management",
+      "Cloud Storage ( Up to 5GB )",
+      "Email & Chat Support",
+      "Team Collaboration"
+    ],
+    "featured": false
+  }
+]
+
+export const faqData = [
+  {
+    id: 1,
+    question: 'What kind of services does Aspect Agency offer?',
+    answer: 'We offer a comprehensive suite of digital services, including brand strategy, web design and development, content creation, SEO, and social media management to elevate your online presence.'
+  },
+  {
+    id: 2,
+    question: 'How does the branding process work?',
+    answer: 'Our branding process is collaborative. We start with a deep dive into your company\'s vision and values, followed by market research, identity design, and a complete style guide to ensure consistency across all platforms.'
+  },
+  {
+    id: 3,
+    question: 'Can you redesign my existing website?',
+    answer: 'Absolutely. We specialize in transforming outdated websites into modern, responsive, and user-friendly platforms that not only look great but also perform exceptionally well.'
+  },
+  {
+    id: 4,
+    question: 'How long does a typical project take?',
+    answer: 'Project timelines vary depending on the scope and complexity. A standard website design can take anywhere from 4 to 8 weeks. We will provide a detailed timeline after our initial consultation.'
+  },
+  {
+    id: 5,
+    question: 'How do you measure the success of a project?',
+    answer: 'We define and track key performance indicators (KPIs) tailored to your project goals, such as website traffic, conversion rates, and engagement metrics, to measure success and drive continuous improvement.'
+  }
+];

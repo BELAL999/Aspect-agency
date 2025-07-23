@@ -81,7 +81,7 @@ const Header = () => {
                             <span className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[6px] h-[6px] rounded-full bg-[#A20C02] dot-pulse-3'></span>
                         </div>
                     </div>
-                    <p>{t('navigation.contact')}</p>
+                    <p className='text-p1'>{t('navigation.contact')}</p>
                 </button>
             </div>
             <div

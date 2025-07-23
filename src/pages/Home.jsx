@@ -5,6 +5,8 @@ import Clints from '../components/Clints';
 import Services from '../components/Services';
 import ServicesAR from '../components/ServicesAR';
 import OurWork from '../components/OurWork';
+import Plans from '../components/Plans';
+import FAQ from '../components/FAQ';
 
 
 
@@ -19,6 +21,8 @@ const Home = () => {
                 i18n.language === "en" ?   <Services /> :  <ServicesAR />
             }
             <OurWork />
+            <Plans />
+            <FAQ />
         </main>
     )
 }
