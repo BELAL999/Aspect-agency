@@ -48,7 +48,7 @@ useGSAP(() => {
         if (el) {
             gsap.fromTo(el, { innerText: 0 }, {
                 innerText: item.value,
-                duration: 1.5,
+                duration: 5,
                 ease: "power1.out",
                 snap: { innerText: 1 },
                 onUpdate: function() {
