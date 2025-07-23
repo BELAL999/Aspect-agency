@@ -1,3 +1,7 @@
+import img1 from "../assets/images/work1.png"
+import img2 from "../assets/images/work2.png"
+import img3 from "../assets/images/work3.png"
+import img4 from "../assets/images/work4.png"
 export const pages = [
     {
         id : 1,
@@ -27,35 +31,19 @@ export const statsData = [
   {
     title : "Happy Customers",
     value: '166+',
-    label: {
-      en: '',
-      ar: 'عملاء سعداء'
-    }
   },
   {
           title: 'Projects Completed',
     value: '1000+',
-    label: {
-      en: 'Projects Completed',
-      ar: 'مشاريع مكتملة'
-    }
   },
   {
           title: 'Years of Experience',
     value: '8+',
-    label: {
-      en: 'Years of Experience',
-      ar: 'سنوات من الخبرة'
-    }
+
   },
   {
           title: 'Team Members',
-
     value: '52',
-    label: {
-      en: 'Team Members',
-      ar: 'أعضاء الفريق'
-    }
   }
 ];
 
@@ -98,3 +86,34 @@ export const services = [
     icon: "📈"
   }
 ];
+
+export const Work = [
+  {
+    "id": 1,
+    "title": "Aspect - SaaS Website Template",
+    "category": "branding",
+    "description": "Aspect is a landing page template designed to showcase SaaS and app information effectively.",
+    "imageUrl": img1
+  },
+  {
+    "id": 2,
+    "title": "Aspect - SaaS Website Template",
+    "category": "Social media",
+    "description": "Aspect is a landing page template designed to showcase SaaS and app information effectively.",
+    "imageUrl": img2
+  },
+  {
+    "id": 3,
+    "title": "Aspect - SaaS Website Template",
+    "category": "UI/UX",
+    "description": "Aspect is a landing page template designed to showcase SaaS and app information effectively.",
+    "imageUrl": img3
+  },
+  {
+    "id": 4,
+    "title": "Aspect - SaaS Website Template",
+    "category": "Branding",
+    "description": "Aspect is a landing page template designed to showcase SaaS and app information effectively.",
+    "imageUrl": img4
+  }
+]

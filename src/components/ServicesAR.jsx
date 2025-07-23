@@ -6,7 +6,7 @@ import { useTheme } from "../contexts/context";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // Register ScrollTrigger plugin
 
-const Services = () => {
+const ServicesAR = () => {
     const cardsRef = useRef(null);
     const {i18n} = useTheme();
 
@@ -14,13 +14,13 @@ useGSAP(() => {
     const cards = gsap.utils.toArray(".service");
     if (cards.length === 0) return;
     const cardWidth = 400;
-    const gap = 32;
+    const gap = 24;
     const containerWidth = window.innerWidth;
     const totalCardsWidth = (cardWidth + gap) * cards.length - gap;
     let scrollDistance = (totalCardsWidth - containerWidth) + 400;
     
     gsap.to(cardsRef.current, {
-        x : -scrollDistance,
+        x : scrollDistance,
         ease: "none",
         scrollTrigger: {
             trigger: ".service-section",
@@ -45,14 +45,14 @@ useGSAP(() => {
                     const isInFocus = distanceFromCenter < (cardWidth + gap) / 2;
                     if (isInFocus) {
                         gsap.to(card, {
+                            opacity: 1,
                             duration: 0.3,
-                            scale : 1.1,
                             ease: "power2.out"
                         });
                     } else {
                         gsap.to(card, {
+                            opacity: 0.3,
                             duration: 0.3,
-                            scale : 1,
                             ease: "power2.out"
                         });
                     }
@@ -73,9 +73,9 @@ useGSAP(() => {
             
             {/* Fixed container structure */}
             <div className='services-container w-full h-full flex items-center overflow-hidden'>
-                <div ref={cardsRef} className='cards flex gap-8'>
+                <div ref={cardsRef} className='cards flex gap-6'>
                     {services.map((service) => (
-                        <div key={service.id} className='service text-p1 px-[12px] py-[30px] bg-card rounded-[13px] border-[1px] border-[#FFF] overflow-hidden flex-shrink-0 w-[400px] opacity-[0.7] transition-all duration-500 hover:opacity-100'>
+                        <div key={service.id} className='service text-p1 px-[12px] py-[30px] bg-card rounded-[13px] border-[1px] border-[#FFF] overflow-hidden flex-shrink-0 w-[400px] opacity-[0.3] transition-all duration-500 hover:opacity-100'>
                             <p className="mb-[100px] text-4xl">{service.icon}</p>
                             <h3 className="text-[20px] font-bold pb-2">{service.title}</h3>
                             <p className="text-[16px] text-[#FFFFFFB2] font-normal leading-relaxed">{service.description}</p>
@@ -87,4 +87,4 @@ useGSAP(() => {
     )
 }
 
-export default Services
+export default ServicesAR

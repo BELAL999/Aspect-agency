@@ -220,3 +220,16 @@ line-height: 69.6px
     background: linear-gradient(335deg, #000 47.23%, #FD8848 178.94%);
 
 }
+@utility work-card{
+    border-radius: 19.576px;
+border-top: 0.5px solid rgba(255, 255, 255, 0.50);
+border-right: 0.5px solid rgba(255, 255, 255, 0.50);
+border-left: 0.5px solid rgba(255, 255, 255, 0.50);
+background: linear-gradient(180deg, rgba(32, 31, 31, 0.90) 0%, #000 100%);
+padding: 22.024px 19.576px;
+    img{
+        border: 8px solid transparent;
+        border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0.03%, rgba(153, 153, 153, 0.00) 43.03%);
+        border-image-slice: 1;
+        position: relative;
+}}
