@@ -75,7 +75,7 @@ useGSAP(() => {
       <p className='pb-[48px] about-p'>
         {t("about.slogan-rest")}
       </p>
-        <button className='about-button'>
+        <button className='about-button text-p1'>
           {t("about.Get Start")}
         </button>
       </div>

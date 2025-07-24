@@ -29,7 +29,7 @@ const Header = () => {
     },[])
 
     return (
-        <nav className={clsx('flex container w-full mt-[36px] items-center justify-between fixed z-20 left-[50%] translate-x-[-50%] transition-all duration-500',hasScroll ? "clients-frame" : "")}>
+        <nav className={clsx('z-40 flex container w-full mt-[36px] items-center justify-between fixed top-0 left-1/2 -translate-x-1/2 transition-all duration-500',hasScroll ? "main-navbar rounded-3xl" : "")}>
             <NavLink to="/" onClick={() => setActiveMenu(false)}>
                 <img src={logo} alt="our logo" width={150}  className={clsx(activeMenu ? "hidden" : "")}/>
             </NavLink>
@@ -50,7 +50,7 @@ const Header = () => {
                         setActiveMenu(false)
 
                     }
-                        } className='cursor-pointer text-xl'>
+                        } className='cursor-pointer text-xl text-p1'>
                         {i18n.language === 'en' ? 'العربية' : 'English'}
                     </button>
                     {/* 1px solid rgba(253, 136, 72, 0.80); */}
@@ -69,7 +69,7 @@ const Header = () => {
 
             </ul>
             <div className='flex gap-[20px]  max-lg:hidden'>
-                <button onClick={() => changeLanguage(i18n.language === 'en' ? "ar" : "en")} className='cursor-pointer text-xl'>
+                <button onClick={() => changeLanguage(i18n.language === 'en' ? "ar" : "en")} className='cursor-pointer text-xl text-p1'>
                     {i18n.language === 'en' ? 'العربية' : 'English'}
                 </button>
                 {/* 1px solid rgba(253, 136, 72, 0.80); */}
