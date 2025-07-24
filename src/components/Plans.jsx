@@ -1,13 +1,12 @@
 
 import { plans } from "../constatns/data" 
+import TopSection from "./TopSection"
 
 const Plans = () => {
 
     return (
         <section className="mt-32 flex flex-col items-center container overflow-hidden pt-12 pb-24">
-            <div className="h-12 px-3.5 bg-stone-900/10 rounded-[124.42px] outline-[1.24px] outline-offset-[-1.24px] outline-stone-200/10 backdrop-blur-[6.22px] inline-flex justify-center items-center gap-3">
-                <div className="text-center justify-start text-white text-xl font-medium leading-loose">Pricing</div>
-            </div>
+            <TopSection text="Pricing" />
             <div className="text-center mt-8">
                 <h2 className="text-white text-4xl font-bold">Choose Your Plan</h2>
                 <p className="text-stone-400 mt-4 max-w-2xl mx-auto">Select the perfect plan that fits your needs. We have flexible options for everyone, from individuals to large enterprises.</p>
@@ -36,7 +35,7 @@ const Plans = () => {
                                 </li>
                             ))}
                         </ul>
-                        <button className={`w-full mt-auto py-3 rounded-2xl text-lg font-semibold transition-colors duration-300 cursor-pointer ${plan.featured ? 'z-50 bg-gradient-to-b from-orange-400 to-orange-600 rounded-[100px] shadow-[0px_11.199999809265137px_20px_0px_rgba(0,0,0,0.30)] text-p1' : 'bg-p1  border border-stone-200/20 text-[#050405]'}`}>
+                        <button className={`w-full mt-auto py-3 rounded-full text-lg font-semibold transition-colors duration-300 cursor-pointer ${plan.featured ? 'z-50 bg-gradient-to-b from-orange-400 to-orange-600 rounded-[100px] shadow-[0px_11.199999809265137px_20px_0px_rgba(0,0,0,0.30)] text-p1' : 'bg-p1  border border-stone-200/20 text-[#050405]'}`}>
                             Choose Plan
                         </button>
                     </div>

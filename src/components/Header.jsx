@@ -29,8 +29,8 @@ const Header = () => {
     },[])
 
     return (
-        <header className={clsx(hasScroll ? "clients-frame" : "bg-transparent")}> 
-            <nav className='z-40 flex container w-full mt-[36px] items-center justify-between fixed top-0 left-1/2 -translate-x-1/2 transition-all duration-500'>
+        <header > 
+            <nav className={clsx('z-40 flex container w-full mt-[36px] items-center justify-between fixed top-0 left-1/2 -translate-x-1/2 transition-all duration-500',hasScroll ? "glass-effect" :"")}>
                 <NavLink to="/" onClick={() => setActiveMenu(false)}>
                     <picture>
                         <source srcSet={logoWeb} type="image/webp" />

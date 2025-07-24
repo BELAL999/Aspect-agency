@@ -8,6 +8,7 @@ import OurWork from '../components/OurWork';
 import Plans from '../components/Plans';
 import FAQ from '../components/FAQ';
 import StartProject from '../components/StartProject';
+import Unique from '../components/Unique';
 
 
 
@@ -23,6 +24,7 @@ const Home = () => {
             }
             <OurWork />
             <Plans />
+            <Unique />
             <FAQ />
             <StartProject />
         </main>

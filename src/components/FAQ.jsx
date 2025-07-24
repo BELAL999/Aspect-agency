@@ -3,6 +3,7 @@ import { faqData } from '../constatns/data';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 import { GoPlus, GoDash } from "react-icons/go";
+import TopSection from './TopSection';
 
 const FAQ = () => {
     const [openAccordion, setOpenAccordion] = useState(faqData.length > 0 ? faqData[0].id : null);
@@ -29,9 +30,7 @@ const FAQ = () => {
 
     return (
         <section ref={container} className="mt-32 flex flex-col items-center container overflow-hidden pt-12 pb-24">
-            <div className="h-12 px-3.5 bg-stone-900/10 rounded-[124.42px] outline-[1.24px] outline-offset-[-1.24px] outline-stone-200/10 backdrop-blur-[6.22px] inline-flex justify-center items-center gap-3">
-                <div className="text-center justify-start text-white text-xl font-medium leading-loose">FAQ</div>
-            </div>
+            <TopSection text="FAQ" />
             <div className="text-center mt-8">
                 <h2 className="text-white text-4xl font-bold">Frequently Asked Questions</h2>
                 <p className="text-stone-400 mt-4 max-w-2xl mx-auto">Have questions? We've got answers. If you can't find what you're looking for, feel free to contact us.</p>

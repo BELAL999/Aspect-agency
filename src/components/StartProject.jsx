@@ -4,7 +4,7 @@ const StartProject = () => {
     const {t} = useTheme();
     return (
         <section className="container my-12">
-            <section className="flex flex-col justify-center items-center start-project">
+            <section className="flex flex-col justify-center items-center start-project max-sm:p-4 ">
                 <h2 className="text-white text-5xl font-bold leading-[50.40px] pb-4">{t("start your Project")}</h2>
                 <p className="text-white/60 text-lg font-medium max-w-[497px] pb-8 text-center">{t("project desc")}</p>
                 <button className="w-60 h-10 px-16 py-3 bg-gradient-to-b from-orange-400 to-orange-600 rounded-[100px] shadow-[0px_11.199999809265137px_20px_0px_rgba(0,0,0,0.30)] inline-flex justify-center items-center gap-2.5 text-p1 cursor-pointer font-bold mb-16">

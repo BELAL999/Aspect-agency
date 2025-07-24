@@ -32,7 +32,6 @@ export default function GlowingArcs({ pathData }) {
                     className="animate-pulse"
                     style={{
                         filter: 'drop-shadow(0 0 6px #f97316) drop-shadow(0 0 12px #f97316) drop-shadow(0 0 18px #ef4444)',
-                        // filter : blur("5px"),
                         animationDuration: '2.5s',
                         animationDelay: '0.8s',
                         animationTimingFunction: 'ease-in-out',
