@@ -293,3 +293,13 @@ flex-shrink: 0;
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
+
+@utility start-project{
+    height: 439px;
+
+    border-radius: 24px;
+border-top: 1px solid #FFF;
+border-right: 1px solid #FFF;
+border-left: 1px solid #FFF;
+background: radial-gradient(86.45% 86.45% at 50% 13.55%, rgba(0, 0, 0, 0.40) 71.01%, rgba(255, 116, 40, 0.40) 85.95%, rgba(146, 55, 6, 0.40) 100%);
+}

@@ -29,7 +29,7 @@ const Header = () => {
     },[])
 
     return (
-        <header className={clsx(hasScroll ? "bg-[#000000]" : "bg-transparent")}> 
+        <header className={clsx(hasScroll ? "clients-frame" : "bg-transparent")}> 
             <nav className='z-40 flex container w-full mt-[36px] items-center justify-between fixed top-0 left-1/2 -translate-x-1/2 transition-all duration-500'>
                 <NavLink to="/" onClick={() => setActiveMenu(false)}>
                     <picture>

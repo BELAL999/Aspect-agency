@@ -36,9 +36,9 @@ const FAQ = () => {
                 <h2 className="text-white text-4xl font-bold">Frequently Asked Questions</h2>
                 <p className="text-stone-400 mt-4 max-w-2xl mx-auto">Have questions? We've got answers. If you can't find what you're looking for, feel free to contact us.</p>
             </div>
-            <div className="mt-16 w-full max-w-4xl mx-auto">
+            <div className="mt-16 w-full max-w-4xl flex flex-col gap-8 justify-center items-center">
                 {faqData.map((item) => (
-                    <div key={item.id} className="border-b border-stone-200/10 faq-item">
+                    <div key={item.id} className="border-b border-stone-200/10 faq-item bg-[#201F1F66] px-8 py-4 rounded-2xl">
                         <button onClick={() => toggleAccordion(item.id)} className="w-full flex justify-between items-center text-left py-6">
                             <h3 className="text-white text-xl font-semibold">{item.question}</h3>
                             <span className="text-p1 text-2xl transition-transform duration-300">{openAccordion === item.id ? <GoDash /> : <GoPlus />}</span>

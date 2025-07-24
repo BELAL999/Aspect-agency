@@ -7,6 +7,7 @@ import ServicesAR from '../components/ServicesAR';
 import OurWork from '../components/OurWork';
 import Plans from '../components/Plans';
 import FAQ from '../components/FAQ';
+import StartProject from '../components/StartProject';
 
 
 
@@ -23,6 +24,7 @@ const Home = () => {
             <OurWork />
             <Plans />
             <FAQ />
+            <StartProject />
         </main>
     )
 }

@@ -67,9 +67,9 @@ useGSAP(() => {
     return (
         <section className='h-screen border mt-32 flex flex-col items-center container service-section overflow-hidden pt-12'>
             <div className="h-12 px-3.5 bg-stone-900/10 rounded-[124.42px] outline-[1.24px] outline-offset-[-1.24px] outline-stone-200/10 backdrop-blur-[6.22px] inline-flex justify-center items-center gap-3">
-                <div className="text-center justify-start text-white text-xl font-medium leading-loose">Services</div>
+                <div className="text-center justify-start text-white text-xl font-medium leading-loose">خدماتنا</div>
             </div>
-            <div className="justify-start text-white text-3xl font-normal leading-[50.40px] pb-6">Explore Our Core Services</div>
+            <div className="justify-start text-white text-3xl font-normal leading-[50.40px] pb-6">استكشف خدماتنا الأساسية</div>
             
             {/* Fixed container structure */}
             <div className='services-container w-full h-full flex items-center overflow-hidden'>
