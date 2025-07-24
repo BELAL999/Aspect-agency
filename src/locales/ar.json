@@ -2,7 +2,7 @@
     "welcome": "مرحبا",
     "welcome Home" : "مرحبا بالعربية ",
     "Header" : "الهيدر" ,
-
+    "Scroll Down" : "مرر للأسفل",
     "navigation": {
         "home": "الرئيسية",
         "about": "لماذا نحن ؟",
@@ -21,6 +21,15 @@
 
 
 
-        "Get Start" : "إبدأ الان"
-    } 
+        "Get Start" : "إبدأ الان",
+        "what is aspect" : "ما هو Aspect ؟"
+    } ,
+    "clients" : {
+        "Trusted by" : "شركاء النجاح",
+        "Results & Analytics" : "نتائج وتحليلات",
+        "Happy Customers" : "العملاء السعداء",
+        "Projects Completed" : "المشاريع المكتملة",
+        "Years of Experience" : "سنوات الخبرة",
+        "Team Members" : "أعضاء الفريق"
+    }
 }

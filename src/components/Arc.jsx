@@ -1,12 +1,10 @@
-export default function GlowingArcs({ ref = null, pahtData }) {
-    console.log(pahtData)
+export default function GlowingArcs({ pathData }) {
     return (
         <div className="absolute top-[60%] w-full h-24 md:h-40 lg:h-48 overflow-hidden">
             <svg 
                 viewBox="0 0 800 200" 
                 className="w-full h-full"
                 xmlns="http://www.w3.org/2000/svg"
-                ref={ref}
                 preserveAspectRatio="xMidYMid slice"
             >
                 <defs>
@@ -26,7 +24,7 @@ export default function GlowingArcs({ ref = null, pahtData }) {
                     </filter>
                 </defs>
                 <path 
-                    d={pahtData}
+                    d={pathData}
                     fill="none"
                     stroke="url(#arcGradient)"
                     strokeWidth="4"

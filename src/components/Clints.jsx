@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import {useRef,useState} from "react"
+import {useRef,useMemo} from "react"
 import {statsData} from "../constatns/data"
 import { useTheme } from "../contexts/context";
 const Clints = () => {
@@ -8,40 +8,35 @@ const Clints = () => {
     const {t} = useTheme();
     const lightSvg = useRef(null);
     const stats = useRef(null);
-    // Create refs for each stat value
     const valueRefs = useRef([]);
-    const [clients,setClients] = useState(Array.from({ length: 18 }, (_, i) => ({
+    const clients = useMemo(() => Array.from({ length: 18 }, (_, i) => ({
         src: `/clients/${i + 1}.png`
-    })))
+    })), []);
 useGSAP(() => {
-    // Create a single timeline with one ScrollTrigger to avoid conflicts
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".outerFrame",
             start: "top center",
-            end: "+=400", // Increased for smoother animation
-            scrub: 1, // Adding ease to scrub
+            end: "+=400", 
+            scrub: 1, 
             toggleActions :"play pause resume reset"
         }
     });
 
-    // Set initial positions
     gsap.set(lightBg.current, { yPercent: -100 });
     gsap.set(stats.current, { yPercent: 0 });
 
-    // Animate lightBg from start
     tl.to(lightBg.current, {
         yPercent: -50,
-        duration: 0.4, // Relative duration within timeline
+        duration: 0.4, 
         ease: "power2.out"
     })
-    // Animate stats with slight delay and stagger
     .from(stats.current, {
         yPercent: 100,
         duration: 0.3,
         stagger: 0.1,
         ease: "back.out(1.7)"
-    }, "-=0.2") // Start 0.2 seconds before previous animation ends
+    }, "-=0.2") 
     
     statsData.forEach((item, i) => {
         const el = valueRefs.current[i];
@@ -64,7 +59,7 @@ useGSAP(() => {
 }, []);   
 return(
         <section className='text-p1 w-screen container outerFrame '>
-            <h3 className="py-8 mx-auto font-semibold text-2xl w-fit">Trusted by</h3>
+            <h3 className="py-8 mx-auto font-semibold text-2xl w-fit">{t('clients.Trusted by')}</h3>
             <div className="relative clients-frame overflow-hidden justify-center items-center">
                 <div className='light-bg' ref={lightBg}></div>
                 <div className='bg-[#F78546] absolute top-0 left-[50%] translate-x-[-50%] w-[10%] h-[1px] rounded-2xl'></div>
@@ -87,15 +82,15 @@ return(
                 <div className="flex flex-wrap gap-x-8 gap-y-4 pt-8 justify-center">
                     {clients.map((client,index) => (
                         <div key= {index} className="clinet-bg">
-                            <img src={client.src} alt={`Client ${index + 1}`} loading="lazy" />
+                            <img src={client.src} alt={`Client ${index + 1}`} loading="lazy" width={180} height={90} />
                         </div>
                         ))
                     }
                 </div>
             </div>
-            <div ref={stats}>
+            <div ref={stats} className="pt-8">
                 <h3 className="pt-8 mx-auto font-semibold text-2xl w-fit">
-                    {t("Results & Analytics")}
+                    {t("clients.Results & Analytics")}
                 </h3>
                 <div className="mt-12 flex max-sm:jutify-center items-center justify-between clients-frame h-fit flex-wrap shadow-2xl">
                     {statsData.map((item,index) => (
@@ -116,7 +111,7 @@ return(
                                 </defs>
                             </svg>
                             <p className="text-[30px] font-bold" ref={el => valueRefs.current[index] = el}>0</p>
-                            <p className="text-[16px] font-bold">{t(item.title)}</p>
+                            <p className="text-[16px] font-bold">{t(`clients.${item.title}`)}</p>
                         </div>
                     ))}
                 </div>

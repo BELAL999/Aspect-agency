@@ -2,7 +2,6 @@ import { useTheme } from '../contexts/context';
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import {useRef} from "react"
-import './about.css'
 
 
 const About = () => {
@@ -14,7 +13,6 @@ useGSAP(() => {
       start: "top-=100 center",
       end: "+=500",
       scrub : true,
-      toggleActions: "play pause resume reset",
     }
   });
 
@@ -26,13 +24,10 @@ useGSAP(() => {
   })
   .from(".absoulte-center", {
     opacity: 0,
-    // yPercent: -100,
     ease: "power4.out"
   })
   .from(".parag", {
-    // Add your animation properties here
     opacity: 0,
-    // yPercent: -100,
     duration : 4,
     ease: "power4.out"
   }).to(".about-p",{
@@ -41,7 +36,7 @@ useGSAP(() => {
     duration : 2,
     ease : "power4.out"
   })
-});
+},[]);
   const {t} = useTheme();
   return (
     <section id='about' className='h-screen flex justify-center items-center relative flex-col '>
@@ -68,7 +63,7 @@ useGSAP(() => {
       </p>
       </div>
       <div className='text-center max-w-[651px] z-10 parag -mt-8'>
-        <p className='about-p font-medium text-4xl text-p1 pb-4 mt-0'>What is Aspect ?</p>
+        <p className='about-p font-medium text-4xl text-p1 pb-4 mt-0'>{t("about.what is aspect")}</p>
               <p className='pb-[10px] about-p'>
         {t("about.slogan")}
       </p>

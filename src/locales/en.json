@@ -2,6 +2,7 @@
     "welcome": "Welcome",
     "welcome Home" : "welcome Home ",
     "Header" : "Header" ,
+    "Scroll Down" : "Scroll Down",
     "navigation": {
         "home": "Home",
         "about": "About",
@@ -18,6 +19,15 @@
                          "slogan-rest" : "Build a brand that turns heads — it starts here.",
                          "overview" : "Overview",
 
-        "Get Start" : "Get Start"
-    } 
+        "Get Start" : "Get Start",
+        "what is aspect" : "What is Aspect ?"
+    } ,
+    "clients" : {
+        "Trusted by" : "Trusted by",
+        "Results & Analytics" : "Results & Analytics",
+        "Happy Customers" : "Happy Customers",
+        "Projects Completed" : "Projects Completed",
+        "Years of Experience" : "Years of Experience",
+        "Team Members" : "Team Members"
+    }
 }
