@@ -194,12 +194,11 @@ line-height: 69.6px
     background-color: #000;
     z-index: 0;
 }
-@utility glass-effect {
+.glass-effect {
     background: rgba(0, 0, 0, 0.00);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 100px;
-    opacity: 0.5;
 }
 @utility light-bg {
     position: absolute;
