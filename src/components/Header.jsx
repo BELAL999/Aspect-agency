@@ -31,7 +31,7 @@ const Header = () => {
     return (
         <nav className={clsx('z-40 flex container w-full mt-[36px] items-center justify-between fixed top-0 left-1/2 -translate-x-1/2 transition-all duration-500',hasScroll ? "main-navbar rounded-3xl" : "")}>
             <NavLink to="/" onClick={() => setActiveMenu(false)}>
-                <img src={logo} alt="our logo" width={150}  className={clsx(activeMenu ? "hidden" : "")}/>
+                <img src={logo} alt="our logo" width={150} loading="lazy" className={clsx(activeMenu ? "hidden" : "")}/>
             </NavLink>
             <ul className={clsx('flex min-lg:px-[100px] gap-[48px] min-lg:py-[16px] max-lg:dropDown',
             activeMenu ? "dropDownItem " : "hide")}>

@@ -87,7 +87,7 @@ return(
                 <div className="flex flex-wrap gap-x-8 gap-y-4 pt-8 justify-center">
                     {clients.map((client,index) => (
                         <div key= {index} className="clinet-bg">
-                            <img src={client.src} alt={`Client ${index + 1}`} />
+                            <img src={client.src} alt={`Client ${index + 1}`} loading="lazy" />
                         </div>
                         ))
                     }

@@ -35,7 +35,7 @@ const OurWork = () => {
                 <div className="flex justify-center items-center flex-wrap gap-10 relative work-cards-container">
                     {Work.map((item) => (
                         <div key={item.id} className="w-full lg:w-[calc(50%-40px)] max-w-[520px] work-card">
-                            <img src={item.imageUrl} alt={item.imageUrl} className="w-full object-cover rounded-md mb-10" />
+                            <img src={item.imageUrl} alt={item.imageUrl} className="w-full object-cover rounded-md mb-10" loading="lazy" />
                             <div className="flex justify-between items-center">
                               <h3 className="text-white text-2xl font-bold">{item.title}</h3>
                               <p className="rounded-[60.72px] border-l-[0.61px] border-r-[0.61px] border-t-[0.61px] border-stone-200/30 text-stone-400 py-1 px-4">{item.category}</p>
