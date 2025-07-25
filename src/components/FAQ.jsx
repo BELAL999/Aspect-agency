@@ -37,7 +37,7 @@ const FAQ = () => {
             </div>
             <div className="mt-16 w-full max-w-4xl flex flex-col gap-8 justify-center items-center">
                 {faqData.map((item) => (
-                    <div key={item.id} className="border-b border-stone-200/10 faq-item bg-[#201F1F66] px-8 py-4 rounded-2xl">
+                    <div key={item.id} className="border-b border-stone-200/10 faq-item bg-[#201F1F66] px-4 py-1 rounded-2xl">
                         <button onClick={() => toggleAccordion(item.id)} className="w-full flex justify-between items-center text-left py-6">
                             <h3 className="text-white text-xl font-semibold">{item.question}</h3>
                             <span className="text-p1 text-2xl transition-transform duration-300">{openAccordion === item.id ? <GoDash /> : <GoPlus />}</span>

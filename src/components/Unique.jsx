@@ -1,14 +1,27 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { useTheme } from "../contexts/context";
-import { FaRegLightbulb, FaUsers, FaRocket } from 'react-icons/fa';
+import { FaRegLightbulb, FaUsers, FaRocket, FaUsersCog, FaComments, FaChartLine } from 'react-icons/fa';
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 import TopSection from './TopSection';
+import clsx from "clsx";
+import strokeEffect from '../Hooks/strokeEffect';
 
 const Unique = () => {
     const { t } = useTheme();
     const container = useRef();
-
+    useEffect(()=>{
+        document.querySelector(".unique-features-wrapper").onmousemove = e => {
+        for(const card of document.getElementsByClassName("unique-feature-card")) {
+        const rect = card.getBoundingClientRect(),
+                x = e.clientX - rect.left,
+                y = e.clientY - rect.top;
+    
+        card.style.setProperty("--mouse-x", `${x}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
+        };
+    };
+    },[])
     const uniqueFeatures = [
         {
             id: 1,
@@ -27,22 +40,58 @@ const Unique = () => {
             icon: <FaRocket size={32} />,
             title: "Proven Track Record",
             description: "With a history of successful projects and satisfied clients, we have a proven track record of excellence."
+        },
+        {
+            id: 4,
+            icon: <FaUsersCog size={32} />,
+            title: "Expert Team",
+            description: "Our team consists of experienced professionals dedicated to delivering high-quality work and innovative strategies."
+        },
+        {
+            id: 5,
+            icon: <FaComments size={32} />,
+            title: "Transparent Communication",
+            description: "We believe in open and honest communication, keeping you informed every step of the way for a collaborative partnership."
+        },
+        {
+            id: 6,
+            icon: <FaChartLine size={32} />,
+            title: "Data-Driven Results",
+            description: "We use data and analytics to drive our strategies, ensuring measurable results and a significant return on investment."
         }
     ];
 
     useGSAP(() => {
-        gsap.from(".unique-feature-card", {
+        gsap.from(".rightCard", {
             scrollTrigger: {
                 trigger: container.current,
-                start: "top 80%",
+                start: "top 30%",
                 toggleActions: "play none none none",
+                scrub: true,
+                markers : true,
             },
             opacity: 0,
             y: 50,
+            x: -50,
             duration: 0.8,
             ease: "power3.out",
-            stagger: 0.2,
+            stagger: 0.1,
         });
+        gsap.from(".leftCard", {
+            scrollTrigger: {
+                trigger: container.current,
+                start: "top 30%",
+                toggleActions: "play none none none",
+                scrub: true,
+            },
+            opacity: 0,
+            y: 50,
+            x: 50,
+            duration: 0.8,
+            ease: "power3.out",
+            stagger: 0.1,
+        });
+
     }, { scope: container });
 
     return (
@@ -52,12 +101,14 @@ const Unique = () => {
                 <h2 className="text-white text-4xl font-bold">{t("What Makes Us Unique")}</h2>
                 <p className="text-stone-400 mt-4 max-w-2xl mx-auto">{t("Discover the key differentiators that set us apart from the competition and make us the ideal partner for your next project.")}</p>
             </div>
-            <div className="mt-16 w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8">
-                {uniqueFeatures.map((feature) => (
-                    <div key={feature.id} className="bg-stone-900/20 border border-stone-200/10 p-8 rounded-2xl flex flex-col items-center text-center unique-feature-card">
-                        <div className="text-p1 mb-6">{feature.icon}</div>
-                        <h3 className="text-white text-2xl font-bold mb-4">{t(feature.title)}</h3>
-                        <p className="text-stone-300">{t(feature.description)}</p>
+            <div className="mt-16 w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 unique-features-wrapper">
+                {uniqueFeatures.map((feature,index) => (
+                    <div key={feature.id} className={clsx(" unique-feature-card" , index % 2 === 0 ? "rightCard" : "leftCard"  )}>
+                        <div className={clsx("card-content  w-full ")}>
+                            <div className="text-p1 mb-6">{feature.icon}</div>
+                            <h3 className="text-white text-2xl font-bold mb-4">{t(feature.title)}</h3>
+                            <p className="text-stone-300">{t(feature.description)}</p>
+                        </div>
                     </div>
                 ))}
             </div>
