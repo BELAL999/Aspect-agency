@@ -72,11 +72,13 @@ useEffect(() => {
                         <div key={item.id} className="w-full lg:w-[calc(50%-40px)] max-w-[520px] work-card">
                             <div className="card-content">
                                 <img src={item.imageUrl} alt={item.imageUrl} width={481} height={316} className="w-full object-cover rounded-md mb-10 aspect-[481/316]" loading="lazy" />
-                                <div className="flex justify-between items-center">
-                                    <h3 className="text-white text-2xl font-bold">{item.title}</h3>
-                                    <p className="rounded-[60.72px] border-l-[0.61px] border-r-[0.61px] border-t-[0.61px] border-stone-200/30 text-stone-400 py-1 px-4">{item.category}</p>
+                                <div>
+                                    <div className="flex justify-between items-center">
+                                        <h3 className="text-white text-2xl font-bold">{item.title}</h3>
+                                        <p className="rounded-[60.72px] border-l-[0.61px] border-r-[0.61px] border-t-[0.61px] border-stone-200/30 text-stone-400 py-1 px-4">{item.category}</p>
+                                    </div>
+                                    <p className="text-stone-400 mt-2">{item.description}</p>
                                 </div>
-                                <p className="text-stone-400 mt-2">{item.description}</p>
                             </div>
                         </div>
                     ))}
