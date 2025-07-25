@@ -298,8 +298,8 @@ line-height: 69.6px
         background-color: black;
         border-radius: inherit;
         transition: all 0.25s;
-        height: calc(100% - 2px);
-        width: calc(100% - 2px);
+        min-height: 520px;
+        width: 100% ;
             padding: 22.024px 19.576px;
     }
         
