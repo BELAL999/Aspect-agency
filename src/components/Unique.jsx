@@ -5,23 +5,35 @@ import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 import TopSection from './TopSection';
 import clsx from "clsx";
-import strokeEffect from '../Hooks/strokeEffect';
 
 const Unique = () => {
     const { t } = useTheme();
     const container = useRef();
-    useEffect(()=>{
-        document.querySelector(".unique-features-wrapper").onmousemove = e => {
-        for(const card of document.getElementsByClassName("unique-feature-card")) {
-        const rect = card.getBoundingClientRect(),
-                x = e.clientX - rect.left,
-                y = e.clientY - rect.top;
+useEffect(() => {
+    const wrapper = document.querySelector(".unique-features-wrapper");
     
-        card.style.setProperty("--mouse-x", `${x}px`);
-        card.style.setProperty("--mouse-y", `${y}px`);
-        };
+    if (!wrapper) return; // Guard against missing element
+    
+    const handleMouseMove = (e) => {
+        const cards = document.getElementsByClassName("unique-feature-card");
+        
+        for (const card of cards) {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            card.style.setProperty("--mouse-x", `${x}px`);
+            card.style.setProperty("--mouse-y", `${y}px`);
+        }
     };
-    },[])
+    
+    wrapper.addEventListener("mousemove", handleMouseMove);
+    
+    // Cleanup function
+    return () => {
+        wrapper.removeEventListener("mousemove", handleMouseMove);
+    };
+}, []);
     const uniqueFeatures = [
         {
             id: 1,
@@ -68,7 +80,6 @@ const Unique = () => {
                 start: "top 30%",
                 toggleActions: "play none none none",
                 scrub: true,
-                markers : true,
             },
             opacity: 0,
             y: 50,
