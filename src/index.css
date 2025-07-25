@@ -65,7 +65,7 @@ body{
     -webkit-filter: drop-shadow(rgb(249, 115, 22) 0px 0px 6px) drop-shadow(rgb(249, 115, 22) 0px 0px 12px) drop-shadow(rgb(239, 68, 68) 0px 0px 18px);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-
+    transform: translateZ(0)
 }
 
 li{
