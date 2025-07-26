@@ -60,13 +60,6 @@ body{
     }
 }
 
-.pahtGlow {
-    filter: drop-shadow(rgb(249, 115, 22) 0px 0px 6px) drop-shadow(rgb(249, 115, 22) 0px 0px 12px) drop-shadow(rgb(239, 68, 68) 0px 0px 18px);
-    -webkit-filter: drop-shadow(rgb(249, 115, 22) 0px 0px 6px) drop-shadow(rgb(249, 115, 22) 0px 0px 12px) drop-shadow(rgb(239, 68, 68) 0px 0px 18px);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transform: translateZ(0)
-}
 
 li{
     color :var(--color-p1)
@@ -212,7 +205,7 @@ line-height: 69.6px
     z-index: 0;
 }
 .glass-effect {
-    background: rgba(0, 0, 0, 0.00);
+  background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 100px;
