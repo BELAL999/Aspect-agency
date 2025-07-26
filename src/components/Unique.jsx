@@ -80,7 +80,6 @@ useEffect(() => {
                 start: "top 30%",
                 toggleActions: "play none none none",
                 scrub: true,
-                markers  : true ,
             },
             opacity: 0,
             y: 50,
