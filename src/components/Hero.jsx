@@ -26,7 +26,13 @@ const HeroSection = () => {
                         </svg>
                     </div>
                 </div>
-                <GlowingArcs  pathData = "M 100 150 Q 400 50 700 150"  />
+                {/* <GlowingArcs  pathData = "M 100 150 Q 400 50 700 150"  /> */}
+                <div class="arc">
+                    <div className= "arc-inner"></div>
+                    </div>
+                    <div className="arc is">
+                    <div className="arc-inner"></div>
+                    </div>
             </section>
 
     );

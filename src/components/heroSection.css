@@ -72,3 +72,59 @@
         scale: 1;
     }
 }
+
+
+body{
+  background-color : black
+}
+.arc{
+  z-index: 2;
+    aspect-ratio: 1;
+    background-image: linear-gradient(180deg, #FD8848
+, #FFB186
+ 3%, #000000 8%);
+    border-radius: 50%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 160vw;
+    padding: .1rem;
+    position: absolute;
+    inset: 70% auto auto 50%;
+    transform : translate(-50%);
+}
+.arc-inner{
+    background-color: black;
+    opacity: 1;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.is{
+    opacity: .7;
+    filter: blur(1.5rem);
+    will-change: transform;
+    transform: translate(-50%, -1%);
+
+    padding: 3rem;
+}
+.outer.is{
+      animation :heroAurora 14s infinite ease-in-out;
+}
+@keyframes heroAurora {
+  0% {
+    transform: translate(-50%, -1%) rotateZ(0deg);
+  }
+  25% {
+    transform: translate(-50%, -1%)             rotateZ(-7deg);
+}
+  50% {
+    transform: translate(-50%, -1%) rotateZ(0deg);
+}
+  75% {
+    transform: translate(-50%, -1%) rotateZ(7deg);
+}
+  100% {
+    transform: translate(-50%, -1%) rotateZ(0deg);
+}
+}
