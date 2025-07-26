@@ -52,44 +52,44 @@ export const services = [
   {
     id: 1,
     title: "Web Design & Development",
-    description: "Create stunning, responsive websites that captivate your audience and drive conversions. From concept to launch, we build modern web experiences that work seamlessly across all devices.",
+    description: "We build stunning, responsive websites that work on all devices.",
     icon: "🌐",
-    glowBg : "#f97316"
+    glowBg: "#f9731680"
   },
   {
     id: 2,
     title: "Graphic Design",
-    description: "Transform your brand with eye-catching visual designs. We create logos, branding materials, marketing assets, and print designs that make your business stand out from the competition.",
+    description: "Eye-catching logos and branding to make your business stand out.",
     icon: "🎨",
-        glowBg : "#facc15"
+    glowBg: "#facc1580"
   },
   {
     id: 3,
     title: "Video Editing & Production",
-    description: "Bring your stories to life with professional video editing and production services. From promotional videos to social media content, we create engaging visual narratives that connect with your audience.",
+    description: "Professional video editing for engaging promotional and social media content.",
     icon: "🎬",
-        glowBg : "#0ea5e9"
+    glowBg: "#0ea5e980"
   },
   {
     id: 4,
     title: "Social Media Management",
-    description: "Boost your online presence with strategic social media management. We create compelling content, manage your accounts, and engage with your community across all major platforms.",
+    description: "We manage your social media with strategic content and engagement.",
     icon: "📱",
-        glowBg : "#f97316"
+    glowBg: "#f9731680"
   },
   {
     id: 5,
     title: "UI/UX Design",
-    description: "Design intuitive and beautiful user interfaces that provide exceptional user experiences. We focus on usability, accessibility, and modern design principles to create digital products users love.",
+    description: "Designing intuitive, beautiful user interfaces that your users will love.",
     icon: "💡",
-        glowBg : "#facc15"
+    glowBg: "#facc1580" // Corrected from #facc158
   },
   {
     id: 6,
     title: "Digital Marketing",
-    description: "Grow your business with comprehensive digital marketing strategies. From SEO and content marketing to PPC campaigns and analytics, we help you reach your target audience effectively.",
+    description: "Grow your business with SEO, content marketing, and PPC campaigns.",
     icon: "📈",
-        glowBg : "#0ea5e9"
+    glowBg: "#0ea5e980"
   }
 ];
 

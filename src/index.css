@@ -33,6 +33,7 @@ body{
     font-family: "Rethink Sans", sans-serif;
     position: relative;
     overflow-x: hidden;
+    cursor: url("src/assets/images/CLICK.png") , auto;
 }
 
 :lang(ar) {
@@ -258,14 +259,14 @@ line-height: 69.6px
     border-radius: inherit;
     content: "";
     height: 100%;
-    left: 0px;
+    left: 0%;
     opacity: 0;
     position: absolute;
-    top: 0px;
+    top:0;
     transition: opacity 1000ms;
     width: 100%;
     filter: blur(50px);
-    z-index: 1;
+    z-index: 0;
 
   }
     .service:hover .glowBg {

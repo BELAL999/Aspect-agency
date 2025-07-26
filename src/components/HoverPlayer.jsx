@@ -18,7 +18,7 @@ const HoverPlayer = ({src}) => {
     }
     return (
         <div
-            className="relative h-full" 
+            className="relative h-[286.8px]" 
             onMouseEnter={handleMuseEnter}
             onMouseLeave={handleMuseLeave}
         >
