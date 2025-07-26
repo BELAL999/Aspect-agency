@@ -18,7 +18,7 @@ const HoverPlayer = ({src}) => {
     }
     return (
         <div
-            className="video-container"
+            className="relative h-full" 
             onMouseEnter={handleMuseEnter}
             onMouseLeave={handleMuseLeave}
         >
@@ -27,6 +27,8 @@ const HoverPlayer = ({src}) => {
             src={src}
             loop
             muted
+            playsInline
+            className=""
             style={{
             width: '100%',
             height: '100%',
@@ -35,7 +37,7 @@ const HoverPlayer = ({src}) => {
             transition: 'opacity 0.3s ease-in-out',
         }}
             >
-
+                Your browser does not support the video tag.
             </video>
         </div>
     )

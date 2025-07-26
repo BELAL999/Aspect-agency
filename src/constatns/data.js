@@ -53,37 +53,43 @@ export const services = [
     id: 1,
     title: "Web Design & Development",
     description: "Create stunning, responsive websites that captivate your audience and drive conversions. From concept to launch, we build modern web experiences that work seamlessly across all devices.",
-    icon: "🌐"
+    icon: "🌐",
+    glowBg : "#f97316"
   },
   {
     id: 2,
     title: "Graphic Design",
     description: "Transform your brand with eye-catching visual designs. We create logos, branding materials, marketing assets, and print designs that make your business stand out from the competition.",
-    icon: "🎨"
+    icon: "🎨",
+        glowBg : "#facc15"
   },
   {
     id: 3,
     title: "Video Editing & Production",
     description: "Bring your stories to life with professional video editing and production services. From promotional videos to social media content, we create engaging visual narratives that connect with your audience.",
-    icon: "🎬"
+    icon: "🎬",
+        glowBg : "#0ea5e9"
   },
   {
     id: 4,
     title: "Social Media Management",
     description: "Boost your online presence with strategic social media management. We create compelling content, manage your accounts, and engage with your community across all major platforms.",
-    icon: "📱"
+    icon: "📱",
+        glowBg : "#f97316"
   },
   {
     id: 5,
     title: "UI/UX Design",
     description: "Design intuitive and beautiful user interfaces that provide exceptional user experiences. We focus on usability, accessibility, and modern design principles to create digital products users love.",
-    icon: "💡"
+    icon: "💡",
+        glowBg : "#facc15"
   },
   {
     id: 6,
     title: "Digital Marketing",
     description: "Grow your business with comprehensive digital marketing strategies. From SEO and content marketing to PPC campaigns and analytics, we help you reach your target audience effectively.",
-    icon: "📈"
+    icon: "📈",
+        glowBg : "#0ea5e9"
   }
 ];
 

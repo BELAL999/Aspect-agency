@@ -3,10 +3,15 @@ import { NavLink } from 'react-router-dom';
 import { useTheme } from '../contexts/context';
 import logo from '../assets/images/logo.png'
 import logoWeb from '../assets/images/logo.webp'
-import clsx from "clsx"
+import logoScroll from "../assets/images/logo 4.webp";
+import logoScrollPng from "../assets/images/logo 4.png";
+import clsx from "clsx";
 import { GoX } from "react-icons/go";
 import { useEffect,useState } from 'react';
 import { FiAlignJustify } from "react-icons/fi";
+import diagonalArrow  from "../assets/images/send.svg"
+import { BsFillSendFill } from "react-icons/bs";
+
 
 
 const Header = () => {
@@ -31,13 +36,13 @@ const Header = () => {
     },[])
 
     return (
-        <header className={clsx('z-40 flex  mt-6 items-center fixed top-0 left-1/2 -translate-x-1/2 transition-all duration-500 min-lg:border border-[#ffffff33] rounded-full px-2 py-1',hasScroll ? "glass-effect min-lg:w-[700px] w-full backdrop-blur-[10px]" :"max-w-[1000px] w-full")}> 
+        <header className={clsx('z-40 flex  mt-6 items-center fixed top-0 left-1/2 -translate-x-1/2 transition-all duration-[1s] min-lg:border border-[#ffffff33] rounded-full px-2 py-1',hasScroll ? "glass-effect min-lg:w-[600px] w-full backdrop-blur-[10px]" :"max-w-[1000px] w-full")}> 
             <nav className={clsx('flex max-lg:dropDown justify-between items-center flex-1',
                 activeMenu ? "dropDownItem flex-col" : "hide" , hasScroll ? "" : "")}>
                 <NavLink to="/" onClick={() => setActiveMenu(false)}>
                     <picture>
-                        <source srcSet={logoWeb} type="image/webp" />
-                        <img src={logo} alt="logo" width={120} height={26} loading="lazy" />
+                        <source srcSet={hasScroll ? logoScroll : logoWeb} type="image/webp" />
+                        <img src={hasScroll ? logoScrollPng : logo} alt="logo" width={hasScroll ? 45 : 120} height={hasScroll ? 36 : 26} loading="lazy" />
                     </picture>
                 </NavLink>
                 <ul className={clsx("flex gap-[48px] justify-center items-center max-lg:flex-col max-lg:py-[45px]",
@@ -63,8 +68,8 @@ const Header = () => {
                                 <path d="M14.4386 0.560059C14.4386 0.560059 18.0386 5.30006 18.0386 12.5001C18.0386 19.7001 14.4386 24.4401 14.4386 24.4401M12.0386 24.4401C12.0386 24.4401 8.43863 19.7001 8.43863 12.5001C8.43863 5.30006 12.0386 0.560059 12.0386 0.560059M1.99463 16.7001H24.4826M1.99463 8.30006H24.4826" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </button>
-                        {/* 1px solid rgba(253, 136, 72, 0.80); */}
-                        {hasScroll ?<div class="w-10 h-10 p-0.5 rounded-[20.04px]  outline-[0.83px] outline-offset-[-0.83px] outline-orange-400 inline-flex justify-center items-center gap-3"></div> :                        <button className='text-xl relative  flex justify-center items-center gap-[8px] border border-[#fd8848cc] rounded-3xl px-[14px] py-[8px] cursor-pointer'>
+
+                        {hasScroll ? <div class="w-10 h-10 p-0.5 rounded-[20.04px] border border-[#ffffff33] inline-flex justify-center items-center gap-3"><BsFillSendFill className='text-white text-xl'/></div> :                        <button className='text-xl relative  flex justify-center items-center gap-[8px] border border-[#ffffff33] rounded-3xl px-[14px] py-[8px] cursor-pointer'>
                             <div className='flex justify-center items-center'>
                                 <div className='relative flex items-center justify-center min-w-[28px] min-h-[28px]'>
                                     <span className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#a20c0233] w-[18px] h-[18px] rounded-full dot-pulse'></span>
@@ -85,12 +90,12 @@ const Header = () => {
         setActiveMenu(!activeMenu);
     }}
     >
-        <NavLink to="/" onClick={() => setActiveMenu(false)}>
+        {activeMenu ? null : <NavLink to="/" onClick={() => setActiveMenu(false)}>
                     <picture>
                         <source srcSet={logoWeb} type="image/webp" />
                         <img src={logo} alt="logo" width={120} height={26} loading="lazy" />
                     </picture>
-                </NavLink>
+                </NavLink>}
     {activeMenu ? (
         <GoX size={28} className='text-[#fd8848]'/>
     ) : (
@@ -102,3 +107,5 @@ const Header = () => {
 }
 
 export default Header
+
+
