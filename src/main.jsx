@@ -7,6 +7,6 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App  dir={i18n.dir()} key={i18n.language}/>
+    <App  dir={i18n.dir()} />
   </StrictMode>,
 )

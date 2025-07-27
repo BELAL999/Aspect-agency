@@ -14,6 +14,7 @@ const App = () => {
 useEffect(() => {
     document.body.dir = i18n.dir();
     document.body.setAttribute('lang', i18n.language);
+    window.scrollTo(0, 0);
     // setTimeout(() => {
     //   // Try to use Lenis for smooth scroll if available
     //   const lenis = window.__lenisInstance || (window.GSAPContext && window.GSAPContext.lenis);
