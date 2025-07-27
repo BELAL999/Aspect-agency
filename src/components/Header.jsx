@@ -85,9 +85,6 @@ const Header = () => {
                 <div
     className={clsx(
         'min-lg:hidden cursor-pointer z-50 flex items-center justify-between w-full relative')}
-    onClick={() => {
-        setActiveMenu(!activeMenu);
-    }}
     >
         {activeMenu ? null : <NavLink to="/" onClick={() => setActiveMenu(false)}>
                     <picture>
@@ -96,9 +93,13 @@ const Header = () => {
                     </picture>
                 </NavLink>}
     {activeMenu ? (
-        <GoX size={28} className='text-[#fd8848]'/>
+        <GoX size={28} className='text-[#fd8848]'     onClick={() => {
+        setActiveMenu(!activeMenu);
+    }}/>
     ) : (
-        <FiAlignJustify className='text-p1 text-2xl' />
+        <FiAlignJustify className='text-p1 text-2xl'      onClick={() => {
+        setActiveMenu(!activeMenu);
+    }}/>
     )}
     </div>
         </header>

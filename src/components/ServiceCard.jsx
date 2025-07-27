@@ -49,7 +49,7 @@ const ServiceCard = ({ id, description, title, video, glowBorder }) => {
                         </div>
                     </div>
                      {/* Description hover effect is now desktop-only */}
-                     <div className="transition-all duration-500 ease-in-out max-h-0 opacity-0 md:group-hover:max-h-40 md:group-hover:opacity-100">
+                     <div className="transition-all duration-500 ease-in-out md:max-h-0 md:opacity-0 md:group-hover:max-h-40 md:group-hover:opacity-100">
                         <p className="text-[16px] text-[#FFFFFFB2] font-normal leading-relaxed max-w-[90%] pt-2">
                             {description}
                         </p>
