@@ -37,7 +37,7 @@ const Services = () => {
             <TopSection text={t("Services")} />
             <div className="justify-start text-white text-3xl font-normal leading-[50.40px] pb-6">{t("our services")}</div>
             <div className='services-container w-full h-full '>                
-                <div className='cards grid grid-cols-1 md:grid-cols-2 min-lg:grid-cols-3 gap-4 relative items-center'>
+                <div className='cards grid grid-cols-1 md:grid-cols-2 min-lg:grid-cols-3 gap-4 relative items-center justify-center'>
                     {services.map((service) => (
                         <div
                             key={service.id}

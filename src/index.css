@@ -33,7 +33,7 @@ body{
     font-family: "Rethink Sans", sans-serif;
     position: relative;
     overflow-x: hidden;
-    cursor: url("/click.png") , auto;
+    cursor: url("/CLICK.png") , auto;
 }
 
 :lang(ar) {
