@@ -84,13 +84,6 @@ export const services = [
     icon: "💡",
     glowBg: "#facc1580" // Corrected from #facc158
   },
-  {
-    id: 6,
-    title: "Digital Marketing",
-    description: "Grow your business with SEO, content marketing, and PPC campaigns.",
-    icon: "📈",
-    glowBg: "#0ea5e980"
-  }
 ];
 
 export const Work = [

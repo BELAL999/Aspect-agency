@@ -10,7 +10,31 @@ import { BsFillSendFill } from "react-icons/bs";
 
 const Services = () => {
     const [hoveredCard, setHoveredCard] = useState(null);
+    const divStyle = {
+   }
+    useEffect(()=>{
+            const wrapper = document.querySelector(".services-container");
 
+    const handleMouseMove = (e) => {
+        const cards = document.getElementsByClassName("service");
+        
+        for (const card of cards) {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            card.style.setProperty("--mouse-x", `${x}px`);
+            card.style.setProperty("--mouse-y", `${y}px`);
+        }
+    };
+    
+    wrapper.addEventListener("mousemove", handleMouseMove);
+    
+    // Cleanup function
+    return () => {
+        wrapper.removeEventListener("mousemove", handleMouseMove);
+    };
+    })
     return (
         <section className='min-h-screen border mt-32 flex flex-col items-center service-section pt-12 max-w-[96rem]'>
             <TopSection text="Services" />
@@ -23,6 +47,12 @@ const Services = () => {
                             className={clsx('service text-p1 px-[4px] py-[4px]  opacity-[0.7] transition-all duration-500 hover:opacity-100 bg-[#00000033] rounded-2xl h-96', service.id  === 4 ? "md:col-start-1 md:col-end-3" : "")}
                             onMouseEnter={() => setHoveredCard(service.id)}
                             onMouseLeave={() => setHoveredCard(null)}
+                            style = {{
+                                borderImageSource: `radial-gradient(
+      800px circle at var(--mouse-x) var(--mouse-y), 
+      ${service.glowBg},
+      transparent 40%)`}
+                            }
                         >
                             <div className="glowBg" style={{
                                 background : service.glowBg
