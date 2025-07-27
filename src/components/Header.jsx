@@ -9,7 +9,6 @@ import clsx from "clsx";
 import { GoX } from "react-icons/go";
 import { useEffect,useState } from 'react';
 import { FiAlignJustify } from "react-icons/fi";
-import diagonalArrow  from "../assets/images/send.svg"
 import { BsFillSendFill } from "react-icons/bs";
 
 
@@ -36,7 +35,7 @@ const Header = () => {
     },[])
 
     return (
-        <header className={clsx('z-40 flex  mt-6 items-center fixed top-0 left-1/2 -translate-x-1/2 transition-all duration-[1s] min-lg:border border-[#ffffff33] rounded-full px-2 py-1',hasScroll ? "glass-effect min-lg:w-[600px] w-full backdrop-blur-[10px]" :"max-w-[1000px] w-full")}> 
+        <header className={clsx('z-40 flex mt-6 items-center fixed top-0 left-1/2 -translate-x-1/2 transition-all duration-[1s] min-lg:border border-[#ffffff33] rounded-full px-2 py-1',hasScroll ? "glass-effect min-lg:w-[600px] w-full backdrop-blur-[10px]" :"max-w-[1000px] w-full")}> 
             <nav className={clsx('flex max-lg:dropDown justify-between items-center flex-1',
                 activeMenu ? "dropDownItem flex-col" : "hide" , hasScroll ? "" : "")}>
                 <NavLink to="/" onClick={() => setActiveMenu(false)}>
