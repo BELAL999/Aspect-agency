@@ -35,7 +35,7 @@ const Header = () => {
     },[])
 
     return (
-            <header className={clsx('z-40 flex h-14 mt-6 items-center fixed top-0 left-1/2 -translate-x-1/2 transition-[width,max-width,padding,background-color] duration-500 ease-in-out min-lg:border border-[#ffffff33] rounded-full px-2 py-1', hasScroll ? "glass-effect min-lg:w-[600px] w-full backdrop-blur-[10px]" : "max-w-[1000px] w-full")}>
+            <header className={clsx('z-40 flex md:h-14 mt-6 items-center fixed top-0 left-1/2 -translate-x-1/2 transition-[width,max-width,padding,background-color] duration-500 ease-in-out min-lg:border border-[#ffffff33] rounded-full px-2 py-1', hasScroll ? "glass-effect min-lg:w-[600px] w-full backdrop-blur-[10px]" : "max-w-[1000px] w-full")}>
             <nav className={clsx('flex max-lg:dropDown justify-between items-center flex-1 flex-nowrap',
                 activeMenu ? "dropDownItem flex-col" : "hide" , hasScroll ? "" : "")}>
                 <NavLink to="/" onClick={() => setActiveMenu(false)}>
