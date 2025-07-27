@@ -44,7 +44,7 @@ const ServiceCard = ({ id, description, title, video, glowBorder }) => {
                      <div className="flex justify-between items-center">
                         <h3 className="text-2xl font-bold">{title}</h3>
                         {/* Icon hover effect is now desktop-only */}
-                        <div className="w-10 h-10 p-0.5 rounded-full border border-[#ffffff33] inline-flex justify-center items-center transition-opacity duration-300 opacity-0 md:group-hover:opacity-100">
+                        <div className="w-10 h-10 p-0.5 rounded-full border border-[#ffffff33] inline-flex justify-center items-center transition-opacity duration-300 md:opacity-0 md:group-hover:opacity-100">
                             <BsFillSendFill className='text-white text-xl' />
                         </div>
                     </div>

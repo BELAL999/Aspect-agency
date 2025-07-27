@@ -35,8 +35,8 @@ const Header = () => {
     },[])
 
     return (
-        <header className={clsx('z-40 flex mt-6 items-center fixed top-0 left-1/2 -translate-x-1/2 transition-all duration-[1s] min-lg:border border-[#ffffff33] rounded-full px-2 py-1',hasScroll ? "glass-effect min-lg:w-[600px] w-full backdrop-blur-[10px]" :"max-w-[1000px] w-full")}> 
-            <nav className={clsx('flex max-lg:dropDown justify-between items-center flex-1',
+            <header className={clsx('z-40 flex h-14 mt-6 items-center fixed top-0 left-1/2 -translate-x-1/2 transition-[width,max-width,padding,background-color] duration-500 ease-in-out min-lg:border border-[#ffffff33] rounded-full px-2 py-1', hasScroll ? "glass-effect min-lg:w-[600px] w-full backdrop-blur-[10px]" : "max-w-[1000px] w-full")}>
+            <nav className={clsx('flex max-lg:dropDown justify-between items-center flex-1 flex-nowrap',
                 activeMenu ? "dropDownItem flex-col" : "hide" , hasScroll ? "" : "")}>
                 <NavLink to="/" onClick={() => setActiveMenu(false)}>
                     <picture>
@@ -68,17 +68,41 @@ const Header = () => {
                             </svg>
                         </button>
 
-                        {hasScroll ? <div class="w-10 h-10 p-0.5 rounded-[20.04px] border border-[#ffffff33] inline-flex justify-center items-center gap-3"><BsFillSendFill className='text-white text-xl'/></div> :                        <button className='text-xl relative  flex justify-center items-center gap-[8px] border border-[#ffffff33] rounded-3xl px-[14px] py-[8px] cursor-pointer'>
-                            <div className='flex justify-center items-center'>
-                                <div className='relative flex items-center justify-center min-w-[28px] min-h-[28px]'>
-                                    <span className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#a20c0233] w-[18px] h-[18px] rounded-full dot-pulse'></span>
-                                    <span className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[13px] h-[13px] rounded-full bg-[#a20c0280] dot-pulse-2'></span>
-                                    <span className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[6px] h-[6px] rounded-full bg-[#A20C02] dot-pulse-3'></span>
-                                </div>
-                            </div>
-                            <p className='text-p1'>{t('navigation.contact')}</p>
-                        </button>
-                        }
+                        <button
+    className={clsx(
+        "flex items-center justify-center gap-2 border border-[#ffffff33] cursor-pointer transition-all duration-300 ease-in-out",
+        hasScroll
+            ? "w-10 h-10 rounded-full p-0"
+            : "px-[14px] py-[8px] rounded-3xl"
+    )}
+>
+    {/* Pulsing dot is only visible when not scrolled */}
+                    {!hasScroll && (
+                        <div className="relative w-4 h-4">
+                            <span className='absolute inset-0 m-auto bg-[#a20c0233] w-[18px] h-[18px] rounded-full dot-pulse'></span>
+                            <span className='absolute inset-0 m-auto w-[13px] h-[13px] rounded-full bg-[#a20c0280] dot-pulse-2'></span>
+                            <span className='absolute inset-0 m-auto w-[6px] h-[6px] rounded-full bg-[#A20C02] dot-pulse-3'></span>
+                        </div>
+                    )}
+
+                    {/* The Send Icon is always present */}
+                    <BsFillSendFill
+                        className={clsx(
+                            "text-white text-xl transition-transform duration-300 ease-in-out",
+                            { "transform -rotate-45": !hasScroll } , hasScroll ? "" : "hidden"// Optional: adds a nice touch
+                        )}
+                    />
+
+                    {/* The text smoothly hides and shows */}
+                    <div
+                        className={clsx(
+                            "transition-all duration-300 ease-in-out overflow-hidden",
+                            hasScroll ? "max-w-0 opacity-0" : "max-w-xs opacity-100 delay-300"
+                        )}
+                    >
+                        <p className="text-p1 whitespace-nowrap">{t('navigation.contact')}</p>
+                    </div>
+                </button>
 
                 </div>
             </nav>
