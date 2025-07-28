@@ -19,7 +19,7 @@ useGSAP(() => {
             start: "top center",
             end: "+=400", 
             scrub: 1, 
-            toggleActions :"play pause resume reset"
+            toggleActions :"play none none none",
         }
     });
 
@@ -35,7 +35,8 @@ useGSAP(() => {
         yPercent: 100,
         duration: 0.3,
         stagger: 0.1,
-        ease: "back.out(1.7)"
+        ease: "back.out(1.7)",
+        
     }, "-=0.2") 
     
     statsData.forEach((item, i) => {

@@ -61,7 +61,7 @@ useEffect(() => {
             ease: "power3.out",
             stagger: 0.2,
         });
-    }, { scope: container });
+    }, []);
 
     return (
         <section ref={container} className='min-h-screen border mt-32 flex flex-col items-center container service-section overflow-hidden pt-12'>

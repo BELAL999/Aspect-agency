@@ -59,7 +59,6 @@ const Header = () => {
                         <button onClick={() => {
                             changeLanguage(i18n.language === 'en' ? "ar" : "en")
                             setActiveMenu(false)
-
                         }
                             } className='cursor-pointer text-xl text-p1 flex justify-center items-center'>
                             <svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25" fill="none">
@@ -131,5 +130,3 @@ const Header = () => {
 }
 
 export default Header
-
-
