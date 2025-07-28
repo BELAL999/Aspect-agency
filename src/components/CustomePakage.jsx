@@ -53,7 +53,7 @@ const CustomePakage = () => {
                 <div className='text-p1 font-bold text-2xl'>
                     <p>Customize your package</p>
                 </div>
-                <div className='grid grid-cols-3 justify-items-between items-center w-full gap-3 pt-8'>
+                <div className='grid gird-cols-1 sm:grid-cols-2 lg:grid-cols-3  md:grid-cols-3 justify-items-between items-center w-full gap-3 pt-8'>
                     {services.map((service) => (
                         <CutomePerServives 
                             key={service.id}
