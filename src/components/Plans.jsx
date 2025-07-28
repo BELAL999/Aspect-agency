@@ -1,6 +1,7 @@
 
 import { plans } from "../constatns/data" 
 import TopSection from "./TopSection"
+import CustomePakage from "./CustomePakage"
 
 const Plans = () => {
 
@@ -41,6 +42,7 @@ const Plans = () => {
                     </div>
                 ))}
             </div>
+            <CustomePakage />
         </section>
     )
 }

@@ -19,19 +19,29 @@
     font-weight: normal; /* or 400 */
     font-style: normal;
 }
+@font-face {
+    font-family: 'bebas-kai'; /* You choose this name */
+    src: url('/fonts/bebas-kai.woff2') format('woff2');
+    font-weight: normal; /* or 400 */
+    font-style: normal;
+}
 @theme{
     --color-black-bg: #000;
     --color-p1 : #FFFFFF ;
 }
 
-body{
-    font-family: "Rethink Sans", sans-serif;
+body {
+    font-family: 'Rethink Sans', 'Poppins', sans-serif !important; /* Force font application */
     position: relative;
     overflow-x: hidden;
-    cursor: url("/CLICK.png") , auto;
+    cursor: url("/CLICK.png"), auto;
+}
+/* Add this for explicit English font */
+:lang(en) {
+    font-family: 'bebas-kai', 'Poppins', sans-serif !important;
 }
 :lang(ar) {
-    font-family: 'Bukra', sans-serif;
+    font-family: 'Bukra', sans-serif !important;
 }
 
 .container {
@@ -134,7 +144,6 @@ opacity: 1;
     color: rgb(255, 255, 255);
     opacity: 0.3;
     text-align: center;
-    font-family: "Rethink Sans";
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -143,9 +152,6 @@ opacity: 1;
 .about-button{
     position: relative;
     padding: 11.034px 40px;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
     border-radius: 12px;
     transition : 1s;
     background-color: #000;
@@ -154,34 +160,34 @@ opacity: 1;
 }
 
 @property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
 }
 
 .about-button::after,
 .about-button::before {
-  content: "";
-  position: absolute;
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: conic-gradient(from var(--angle), transparent 70%, #F0360F);
-  transition: 1s;
-  border-radius: 13px;
-  z-index: -1;
-  animation: borderMove 3s infinite;
+    content: "";
+    position: absolute;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: conic-gradient(from var(--angle), transparent 70%, #F0360F);
+    transition: 1s;
+    border-radius: 13px;
+    z-index: -1;
+    animation: borderMove 3s infinite;
 }
-.about-button:hover {
-  &::after , &::before  {
-     background-image: linear-gradient(90deg, #FF2E12 -8.49%, #FD8848 40.49%, #FFB186 104.72%);
-  }
-  &::before{
-  filter : blur(5px)
+.about-button:hover::after,
+.about-button:hover::before {
+    background-image: linear-gradient(90deg, #FF2E12 -8.49%, #FD8848 40.49%, #FFB186 104.72%);
 }
-}
+.about-button:hover::before {
+    filter: blur(5px);
+} 
+
 
 @keyframes borderMove {
     from {
@@ -235,32 +241,7 @@ opacity: 1;
 .service{
     position: relative;
     border: none;
-    /* background: var(--Stroke-for-pricing-card); */
-    /* filter: blur(10px); */
 }
-
-  
-  /* .service .glowBg
- {
-    border-radius: inherit;
-    content: "";
-    height: 100%;
-    left: 0%;
-    opacity: 0;
-    position: absolute;
-    top:0;
-    transition: opacity 1000ms;
-    width: 100%;
-    filter: blur(50px);
-    z-index: 0;
-
-  } */
-    /* .service:hover .glowBg {
-    opacity: 1;
-  } */
-/* .service:hover::before {
-    opacity: 1;
-} */
 .work-card{
     position: relative;
     border-radius: 19.576px;
@@ -436,4 +417,8 @@ background: radial-gradient(86.45% 86.45% at 50% 13.55%, rgba(0, 0, 0, 0.40) 71.
     position: absolute;
     z-index: 2;
     text-align: center;
+}
+
+.storkeForFrame {
+    border: 1px solid var(--Stroke-for-pricing-card)
 }

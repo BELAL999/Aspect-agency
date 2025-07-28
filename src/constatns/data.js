@@ -54,35 +54,44 @@ export const services = [
     title: "Web Design & Development",
     description: "We build stunning, responsive websites that work on all devices.",
     icon: "🌐",
-    glowBg: "#f9731680"
+    glowBg: "#f9731680",
+    price : 100,
   },
   {
     id: 2,
     title: "Graphic Design",
     description: "Eye-catching logos and branding to make your business stand out.",
     icon: "🎨",
-    glowBg: "#facc1580"
+    glowBg: "#facc1580",
+    price : 100,
+
   },
   {
     id: 3,
     title: "Video Editing & Production",
     description: "Professional video editing for engaging promotional and social media content.",
     icon: "🎬",
-    glowBg: "#0ea5e980"
+    glowBg: "#0ea5e980",
+    price : 100,
+
   },
   {
     id: 4,
     title: "Social Media Management",
     description: "We manage your social media with strategic content and engagement.",
     icon: "📱",
-    glowBg: "#f9731680"
+    glowBg: "#f9731680",
+        price : 100,
+
   },
   {
     id: 5,
     title: "UI/UX Design",
     description: "Designing intuitive, beautiful user interfaces that your users will love.",
     icon: "💡",
-    glowBg: "#facc1580" // Corrected from #facc158
+    glowBg: "#facc1580" ,    
+    price : 100,
+
   },
 ];
 
