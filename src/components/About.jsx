@@ -62,7 +62,7 @@ useGSAP(() => {
         {t("about.overview")}
       </p>
       </div>
-      <div className='text-center max-w-[651px] z-10 parag -mt-8'>
+      <div className='text-center max-w-[651px] z-10 parag -mt-8 absoulte-center bg-over'>
         <p className='about-p font-medium text-4xl text-p1 pb-4 mt-0'>{t("about.what is aspect")}</p>
               <p className='pb-[10px] about-p'>
         {t("about.slogan")}

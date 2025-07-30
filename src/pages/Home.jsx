@@ -8,6 +8,7 @@ import Plans from '../components/Plans';
 import FAQ from '../components/FAQ';
 import StartProject from '../components/StartProject';
 import Unique from '../components/Unique';
+import ABoutUs from '../components/AboutUs';
 
 
 
@@ -16,6 +17,7 @@ const Home = () => {
     return (
         <main className=''>
             <Hero />
+            <ABoutUs />
             <About />
             <Clints />
             <Services /> 

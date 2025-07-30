@@ -1,10 +1,6 @@
 import  { useRef } from 'react';
 import { useTheme } from '../contexts/context';
-import GlowingArcs from './Arc';
 import { useStarfield } from '../Hooks/useStarfield';
-
-
-
 
 import './heroSection.css'
 const HeroSection = () => {
@@ -27,7 +23,7 @@ const HeroSection = () => {
                     </div>
                 </div>
                 {/* <GlowingArcs  pathData = "M 100 150 Q 400 50 700 150"  /> */}
-                <div class="arc">
+                <div className="arc">
                     <div className= "arc-inner"></div>
                     </div>
                     <div className="arc is">
