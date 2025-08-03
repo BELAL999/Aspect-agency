@@ -56,7 +56,7 @@ const AboutUs = () => {
         scrollTrigger: {
           trigger: '.about-us',
           start: 'top center',
-          end: '+=500',
+          // end: '+=500',
           scrub: true,
         },
       });
