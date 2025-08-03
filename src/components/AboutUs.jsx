@@ -30,7 +30,7 @@ const AboutUs = () => {
       filter: 'blur(150px)',
       scrollTrigger: {
         trigger: '.aspect',
-        start: 'top center',
+        start: 'top 40%',
         end: '+=300',
         scrub: true,
         // markers: true, // Uncomment for debugging
@@ -90,7 +90,7 @@ const AboutUs = () => {
     ));
 
   return (
-    <section className='w-full min-h-screen flex flex-col justify-center p-8 overflow-hidden mb-72 about-us relative'>
+    <section className='w-full min-h-screen flex flex-col justify-center p-8 overflow-hidden mb-12 about-us relative'>
       <div className='darkBg absolute inset-0'></div>
       <div className='gridBg absolute inset-0'></div>
       <div className='lightBg absolute inset-0'></div>
