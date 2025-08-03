@@ -445,18 +445,19 @@ background: radial-gradient(86.45% 86.45% at 50% 13.55%, rgba(0, 0, 0, 0.40) 71.
         height: 100%;
         background: var(--bg-gradient);
         z-index: 2;
+        opacity: 100;
 }
 .lightBg {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 50%;
+        height: 100%;
         filter: blur(50px);
   background: radial-gradient(
-    circle at center,
-    rgba(253, 135, 72, 0.2) 0%,
-    rgba(253, 135, 72, 0.3) 40%,
+    ellipse at center,
+    rgba(204, 33, 33, 0.2) 0%,
+    rgba(204, 33, 33, 0.6) 40%,
     transparent 80%
   );        z-index: 3;
 }

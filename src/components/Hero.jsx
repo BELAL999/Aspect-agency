@@ -1,7 +1,6 @@
 import  { useRef } from 'react';
 import { useTheme } from '../contexts/context';
 import { useStarfield } from '../Hooks/useStarfield';
-
 import './heroSection.css'
 const HeroSection = () => {
     const {t} = useTheme();
